@@ -78,8 +78,10 @@ Grades are assigned on a 100-point scale:
 Your overall grade for the course will be determined as follows:
 
 -   Homework and programming assignments: 30%
--   Exams (3 midterm exams and 1 comprehensive final exam): 60%
+-   Exams (3 midterm exams and 1 comprehensive final exam): 60% <sup><b>\*</b></sup>
 -   Labs, attendance/participation: 10%
+
+<sup><b>\*</b></sup> Note that you must earn a score of 70 or above on *at least one exam* in order to receive a grade of 2.0 for the course.
 
 ### Course website
 
