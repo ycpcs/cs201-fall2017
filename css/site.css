@@ -16,10 +16,10 @@
 }
 
 #header {
-	border-top: 2px solid #7B878F;
-	border-bottom: 2px solid #7B878F;
+	border-top: 2px solid #354B99;
+	border-bottom: 2px solid #354B99;
 	color: black;
-	background: #abc8c7;
+	background: #99AFFF;
 	font-size: 200%;
 	text-align: center;
 	margin-top: 10px;
@@ -40,9 +40,9 @@
 	margin-top: 30px;
 	padding: 10px 30px;
 	text-align: center;
-	border-top: 2px solid #7B878F;
-	border-bottom: 2px solid #7B878F;
-	background: #abc8c7;
+	border-top: 2px solid #354B99;
+	border-bottom: 2px solid #354B99;
+	background: #99AFFF;
 	color: black;
 }
 
@@ -79,18 +79,18 @@ a.cc-img {
 }
 
 #topnav a {
-	border: 2px solid #7B878F;
+	border: 2px solid #354B99;
 	border-radius: 16px;
 	padding: 4px 12px;
 	text-decoration: none;
-	background: #abc8c7;
+	background: #99AFFF;
 	color: black;
 }
 
 #topnav a:hover {
-	background: #7B878F;
+	background: #354B99;
 	color: white;
-	border: 2px solid #7B878F;
+	border: 2px solid #354B99;
 }
 
 html {
@@ -100,7 +100,9 @@ html {
 
 html, body {
 	margin: 0px 0px;
-	background: #b0a1ba;
+	/*background: #b0a1ba;*/
+	/*background: #4561c7;*/
+	background: #354B99;
 }
 
 h1, h2, h3 {
@@ -110,14 +112,14 @@ h1, h2, h3 {
 
 h1 {
 	margin-top: 32px;
-	border-top: 2px solid #7B878F;
-	border-bottom: 2px solid #7B878F;
+	border-top: 2px solid #354B99;
+	border-bottom: 2px solid #354B99;
 	font-size: 180%;
 	text-align: center;
 }
 
 h2, h3 {
-	border-bottom: 1px solid #7B878F;
+	border-bottom: 1px solid #354B99;
 }
 
 h2 {
@@ -174,8 +176,8 @@ dt {
 }
 
 .parimg {
-	float: left;
-	margin-right: 32px;
+	float: right;
+	margin-left: 32px;
 }
 
 .clear {
@@ -189,52 +191,33 @@ dt {
 .topic-sc, .topic-art, .topic-mus, .topic-hum, .topic-sci, .topic-phy {
 	width: 2em;
 	display: inline-block;
+	text-align: center;
 }
 
 .topic-sc {
 	background: yellow;
 }
 
-.topic-sc::before {
-	content: "\0000a0";
-}
-
 .topic-art {
 	background: #4169E1;
-}
-
-.topic-art::before {
-	content: "\0000a0";
+	color: white;
 }
 
 .topic-mus {
 	background: #deb887;
 }
 
-.topic-mus::before {
-	content: "\0000a0";
-}
-
 .topic-hum {
 	background: #008080;
-}
-
-.topic-hum::before {
-	content: "\0000a0";
+	color: white;
 }
 
 .topic-sci {
 	background: #cc0033;
-}
-
-.topic-sci::before {
-	content: "\0000a0";
+	color: white;
 }
 
 .topic-phy {
 	background: #9900cc;
-}
-
-.topic-phy::before {
-	content: "\0000a0";
+	color: white;
 }
