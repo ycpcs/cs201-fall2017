@@ -81,7 +81,7 @@ Your overall grade for the course will be determined as follows:
 -   Exams (3 midterm exams and 1 comprehensive final exam): 60% <sup><b>\*</b></sup>
 -   Labs, attendance/participation: 10%
 
-<sup><b>\*</b></sup> Note that you must earn a score of 70 or above on *at least one exam* in order to receive a grade of 2.0 for the course.
+<sup><b>\*</b></sup> Note that you must earn a score of 70 or above on *at least one exam* in order to receive a grade of 2.0 or higher for the course.
 
 ### Course website
 
@@ -115,14 +115,12 @@ Any violation of the course's academic integrity policy will be referred to the 
 
 ### Lab Policy
 
-In order to receive credit for completing a lab, you need to get a sign-off from your instructor.  There are four options for this:
+In order to receive credit for completing a lab, you need to get a sign-off from your instructor.  There are two options for this:
 
-1. For 110% of full credit: Get a sign-off in class on the day the lab is due.
-2. For 100% of full credit: Get a sign-off after class on the day the lab is due.
-3. For 90% of full credit: Get a sign-off in the class immediately following the one in which the lab is due.
-4. For 50% of full credit: Get a sign-off sometime before the next exam.
+1. For 100% of full credit: Get a sign-off by the end of the *next* class (i.e., the class that follows the one in which we work on the lab in class.)
+2. For 80% of full credit: Get a sign-off sometime before the next exam.
 
-As you can see above, you can earn some bonus credit for completing the labs early.  We *strongly* recommend that you work on the labs before you come to class, so that when you come to class, you have either completed the lab or have made a good start on it.
+We *strongly* recommend that you work on the labs before you come to class, so that when you come to class, you have made a good start on it and are ready to ask questions about it.
 
 ### Late Assignments
 
