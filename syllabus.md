@@ -11,7 +11,7 @@ title: "Syllabus"
 
 Instructor | Sections | Email | Office hours
 ---------- | -------- | ----- | ------------
-Don Hake | 101, 102, 104 | [djhake2@ycp.edu](mailto:djhake2@ycp.edu) | 	M/Th (KEC 137) 10:00a-12:00p, W/F (KEC 123) 11:15a-12:00p, 1:15p-2:00p, 3:15p-4:00p and by appointment
+Don Hake | 101, 102, 104 | [djhake2@ycp.edu](mailto:djhake2@ycp.edu) | 	M / Th (KEC 137): 10-Noon; W / F (KEC 123): 11:15-Noon, 1:15-2:00, 3:15-4:00; or by appointment
 [David Hovemeyer](http://faculty.ycp.edu/~dhovemey) | 103 | [dhovemey@ycp.edu](mailto:dhovemey@ycp.edu) | In KEC 113: MWF 11-12, T/Th 2-3, or by arrangement
 
 Course Description
