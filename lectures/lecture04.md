@@ -66,7 +66,7 @@ public class CountVowels {
             char ch = (char) c;
 
             ch = Character.toLowerCase(ch);
-            if (ch == 'a' || ch == 'i' || ch == 'o' || ch == 'u') {
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
                 vowelCount++;
             }
         }
