@@ -12,3 +12,4 @@ Sep 6 | [ArrayExample.zip](ArrayExample.zip) | Finding number of elements in an 
 Sep 8 | [ReadCharacters.zip](ReadCharacters.zip) | Read all characters from a text file
 Sep 8 | [ReadLines.zip](ReadLines.zip) | Read all lines of text from a text file
 Sep 8 | [WriteTextFile.zip](WriteTextFile.zip) | Write text to a text file
+Sep 13 | [HandleExceptions.zip](HandleExceptions.zip) | Example of using try/catch and try/finally
