@@ -47,11 +47,26 @@ The formula for computing the distance between two points is
 
 You can compute the square root of a **double** value using the **Math.sqrt** method.
 
-Submitting
-----------
+## Submitting
 
-Export your finished program to a zip file (right-click on the project, then **Export...&rarr;Archive File**). Upload the zip file to the marmoset server as project **assign02**. The server URL is
+When you are done, submit the lab to the Marmoset server using one of the methods below.
 
-> <https://cs.ycp.edu/marmoset>
+### From Eclipse
 
-**IMPORTANT**: after uploading, you should download a copy of your submission and double-check it to make sure that it contains the correct files. **You are responsible for making sure your submission is correct**. You may receive a grade of 0 for an incorrectly submitted assignment.
+If you have the [Simple Marmoset Uploader Plugin](../resources.html) installed, select the project (**CS201\_Assign02**) in the package explorer and then press the blue up arrow button in the toolbar. Enter your Marmoset username and password when prompted.  Make sure your choose **assign02** as the inbox:
+
+> ![Choosing assign02 as the inbox](img/assign02/inbox.png)
+
+This is the recommended way to submit your work.
+
+### From a web browser
+
+Save the project (**CS201\_Assign02**) to a zip file by right-clicking it and choosing
+
+> **Export...&rarr;Archive File**
+
+Upload the saved zip file to the Marmoset server as **assign02**. The server URL is
+
+> <https://cs.ycp.edu/marmoset/>
+
+Use this method only if there is some reason why you can't use the plugin.

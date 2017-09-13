@@ -185,6 +185,18 @@ The assignment will be graded as follows:
 
 # Submitting
 
+When you are done, submit the lab to the Marmoset server using one of the methods below.
+
+From Eclipse
+------------
+
+If you have the [Simple Marmoset Uploader Plugin](../resources.html) installed, select the project (**CS201\_Assign01**) in the package explorer and then press the blue up arrow button in the toolbar. Enter your Marmoset username and password when prompted.
+
+This is the recommended way to submit your work.
+
+From a web browser
+------------------
+
 Save the project (**CS201\_Assign01**) to a zip file by right-clicking it and choosing
 
 > **Export...&rarr;Archive File**
@@ -192,3 +204,5 @@ Save the project (**CS201\_Assign01**) to a zip file by right-clicking it and ch
 Upload the saved zip file to the Marmoset server as **assign01**. The server URL is
 
 > <https://cs.ycp.edu/marmoset/>
+
+Use this method only if there is some reason why you can't use the plugin.
