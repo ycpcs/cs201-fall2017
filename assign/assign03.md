@@ -3,7 +3,7 @@ layout: default
 title: "Assignment 3: Disks Game"
 ---
 
-**Due**: Wednesday, Sept 28th by 11:59 PM
+**Due**: Monday, Oct 2nd by 11:59 PM
 
 Acknowledgment: The idea for this assignment comes from [Tom Ellman](http://pages.vassar.edu/tomellman/) at Vassar College.
 
