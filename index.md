@@ -26,6 +26,7 @@ Welcome to the website for CS 201, Fundamentals of Computer Science II, at York 
 
 ## News
 
+* **Sep 25** &mdash; Don't forget that the first exam takes place in class on **Wednesday, Sept 27th**.
 * **Sep 22** &mdash; A solution for the first practice exam has been posted on the [Practice Exams](practice/index.html) page.
 * **Sep 22** &mdash; The due date for [Assignment 3](assign/assign03.html) has been moved to Monday, Oct 2nd by 11:59 PM.
 * **Sep 11** &mdash; [Assignment 2](assign/assign02.html) and [Assignment 3](assign/assign03.html) have been posted. They are due Monday, Sept 18th and Thursday, Sept 28th, respectively.
