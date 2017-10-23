@@ -26,6 +26,7 @@ Welcome to the website for CS 201, Fundamentals of Computer Science II, at York 
 
 ## News
 
+* **Oct 23** &mdash; Don't forget that the second exam takes place in class on **Friday, Oct 27th**.  A practice exam is available on the [Practice Exams](practice/index.html) page.
 * **Oct 18** &mdash; A second practice exam has been posted on the [Practice Exams](practice/index.html) page.
 * **Oct 4** &mdash; [Assignment 4](assign/assign04.html) has been posted.  The first milestone is due on Thursday, Oct 19th by 11:59 PM.
 * **Sep 25** &mdash; Don't forget that the first exam takes place in class on **Wednesday, Sept 27th**.
