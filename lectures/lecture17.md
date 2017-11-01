@@ -83,4 +83,4 @@ Some parallel computations, however, require *communication* between computation
 
 When a data structure is shared between threads, some form of *synchronization* must be used to ensure that the threads are not accessing and modifying the data structure at the same time. We will not be investigating thread synchronization in this course, but the basic idea is that "locks" can be used to temporarily give one thread exclusive access to the shared data structure.
 
-(If you are interested in learning more, do a web search for "mutex", "critical section", and "java synchronization".)
+(If you are interested in learning more, do web searches for "mutex", "critical section", and "java synchronization".)
