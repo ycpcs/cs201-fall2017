@@ -5,6 +5,8 @@ title: "Assignment 5: Mandelbrot Set Renderer"
 
 **Due**: Tuesday, November 21st by 11:59 PM
 
+*Updated 11/3*: Added a link to an example implementation of the extra-credit GUI.  See the [Insane Extra Credit](#insane-extra-credit) section.
+
 Getting Started
 ===============
 
@@ -223,7 +225,13 @@ An example of a GUI program that uses a thread to schedule a long-running comput
 
 Feel free to use this program as a basis for your extra-credit GUI.  (Note that Google Chrome may spuriously report that this file is malicious; in that case you can use Firefox to download it.)
 
-Make sure that you have the sequential and parallel computation working before you try creating a GUI.
+An example implementation that you can download and try out is here:
+
+> [mandelbrot-obfuscated.jar](mandelbrot-obfuscated.jar)
+
+This example implementation allows zooming in by dragging the mouse, and zooming out by clicking the right mouse button.  Your implementation doesn't need to work exactly the same way, but it should allow similar functionality.
+
+<b>Important</b>: Make sure that you have the sequential and parallel computation working before you try creating a GUI.
 
 Submitting
 ==========
