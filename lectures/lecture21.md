@@ -86,3 +86,9 @@ Now all we need to do is rearrange the right hand side of the equation so that i
 The expanded recurrence now exactly matches the expectation, proving that if *IH*(*n*) is true, then *IH*(*n*+1) must also be true.
 
 Ta-da!
+
+## Another example
+
+Proof that the sum of the squares of the integers from 1 to n is O(N<sup>3</sup>):
+
+> [induction-example.pdf](induction-example.pdf)
