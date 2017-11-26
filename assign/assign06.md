@@ -18,14 +18,14 @@ Your Task
 
 Your task is to implement a color chooser for the [Mandelbrot Set](http://en.wikipedia.org/wiki/Mandelbrot_set) renderer from [CS201 Assignment 5](assign05.html).
 
-Here a couple of images captured from the Mandelbrot Set rendered using the color map you will be implementing for this assigmment (click to see larger version).
+Here a couple of images captured from the Mandelbrot Set rendered using the color map you will be implementing for this assigmment (click to see larger versions):
 
 > <a href="img/assign06/MantaRayAndSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/MantaRayAndSeahorses.png" /></a>
 > <a href="img/assign06/SpiralSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/SpiralSeahorses.png" /></a>
 
 You will be creating a class that will be called from a supplied rendering program.  You will be able to use the rendering program to test your color mapping implementation, and explore the Mandelbrot Set rendering.  You will also be adding JUnit test cases to thoroughly test the color mapping class.  Expected values for each of the three methods you are to implement are supplied, along with an example JUnit test case for you to use as an example for the additional test cases you need to provide.
 
-The initial rendering should look like this, based on an 800 x 800 image, and maximum iteration count of 2000 (click to see larger version):
+If you have implemented the color mapping class correctly, the initial rendering of the full Mandelbrot Set, from (-2,2) to (2,-2), should look like this, based on an 800 x 800 image, and maximum iteration count of 2000 (click to see a larger version):
 
 > <a href="img/assign06/FullMandelbrotSet.png"><img style="width: 300px; height: 300px;" src="img/assign06/FullMandelbrotSet.png" /></a>
 
