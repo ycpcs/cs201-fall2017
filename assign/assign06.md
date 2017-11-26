@@ -16,7 +16,7 @@ You should see a project called **CS201\_Assign06** in the Package Explorer. You
 Your Task
 =========
 
-Your task is to implement a color chooser for the [Mandelbrot Set](http://en.wikipedia.org/wiki/Mandelbrot_set) renderer that you implemented in [CS201 Assignment 5](assign05.html).
+Your task is to implement a color chooser for the [Mandelbrot Set](http://en.wikipedia.org/wiki/Mandelbrot_set) renderer from [CS201 Assignment 5](assign05.html).
 
 > <a href="img/assign06/MantaRayAndSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/MantaRayAndSeahorses.png" /></a>
 
