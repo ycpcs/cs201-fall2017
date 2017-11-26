@@ -23,7 +23,9 @@ Here a couple of images captured from the Mandelbrot Set rendered using the colo
 > <a href="img/assign06/MantaRayAndSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/MantaRayAndSeahorses.png" /></a>
 > <a href="img/assign06/SpiralSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/SpiralSeahorses.png" /></a>
 
-You will be creating a class that will be called from a supplied rendering program.  You will be able to use the rendering program to test your color mapping implementation, and explore the Mandelbrot Set rendering.  You will also be adding JUnit test cases to thoroughly test the color mapping class.  Expected values for each of the three methods you are to implement are supplied, along with an example JUnit test case for you to use as an example for the additional test cases you need to provide.
+You will be creating a class that will be called from a supplied rendering program.  You will be able to use the rendering program to test your color mapping implementation, and explore the Mandelbrot Set.  The program allows zooming in by dragging the mouse, and zooming back out by clicking the right mouse button.
+
+You will also be adding JUnit test cases to thoroughly test the color mapping class.  Expected values for each of the three methods you are to implement are supplied, along with an example JUnit test case for you to use as an example for the additional test cases you need to provide.
 
 If you have implemented the color mapping class correctly, the initial rendering of the full Mandelbrot Set, from (-2,2) to (2,-2), should look like this, based on an 800 x 800 image, and maximum iteration count of 2000 (click to see a larger version):
 
@@ -163,54 +165,40 @@ try {
 }
 {% endhighlight %}
 
-Parallelism
+JUnit Test Cases
 ===========
 
-The computation performed by the program can take a fair amount of CPU time. However, the computation of the number of iterations for each point is *independent* of the computations for all other points. Therefore, you can speed the program up by using multiple threads to compute the number of iterations in different parts of the overall region.
-
-For example, you might divide the overall region into quadrants, and use a separate thread to compute the points in each quadrant. Since there are four threads, if you run the program on a computer with 4 CPU cores, then you could see up to a 4 times speedup.  (Question: is this the best approach for dividing up the work?)
-
-**Suggestion**: Create multiple **MandelbrotTask** objects, and execute each one in a separate thread.
+Under the **junit** folder included with the project is the skeleton for creating the JUnit test cases for this assignment.  The test set-up has been provided for you, including a complete set of expected results for the three Maps that you will be creating.  The first test case has also been provided as an example for creating the test cases for the other two methods.
 
 Grading Criteria
 ================
 
 Your submission will be graded according to the following criteria:
 
-- Computation: 40%
-- Basic rendering of image: 20%
-  * Smooth interpolation of colors (extra credit): 5%
-- Use of threads for parallelism: 30%
-- Design, coding style: 10%
+- createIterCountMap:             20%
+- createIterSpectrumMap:          20%
+- createIterColorMap:             20%
+- createIterSpectrumMapTest:      10%
+- createIterColorMapTest:         10%
+- colorMappingColorChooserTest:   10%
+- Design, coding style, comments: 10%
 
-Insane Extra Credit
+Extra Credit
 -------------------
 
-For up to 50 points of extra credit, implement an interactive GUI.  The GUI should start by visualizing the region (-2,-2) to (2,2).  The user should be allowed to zoom in on an arbitrary square region.  (Make sure that it is only possible for the user to select a square region.)
+For up to 25 points of extra credit, implement an additional color mapping that maps the existing iterCOunts uniformly across the color spectrum.  In other words, rather than distributing them based on their relative size, with larger iterCount entries being allocated a wider region of the color spectrum, allocate the same portion of the spectrum to each existing iterCount in the iterCountMap.
 
-**Important**: The GUI should do the computation in a separate thread, not in the event loop thread.  In other words, do *not* do the computation directly in an event handler.  Instead, when a new rendering needs to be performed, the event handler should start a thread to do the computation.  When the computation is done, it should use **SwingUtilities.invokeLater** to schedule some code to run in the event loop, which then should cause the view to be updated.
+To get the full credit, you will also have to implement a full set of test cases for each new method that you create.
 
-An example of a GUI program that uses a thread to schedule a long-running computation and rendering is available here:
-
-> [GUIWithComputationThread.zip](GUIWithComputationThread.zip)
-
-Feel free to use this program as a basis for your extra-credit GUI.  (Note that Google Chrome may spuriously report that this file is malicious; in that case you can use Firefox to download it.)
-
-An example implementation that you can download and try out is here:
-
-> [mandelbrot-obfuscated.jar](mandelbrot-obfuscated.jar)
-
-This example implementation allows zooming in by dragging the mouse, and zooming out by clicking the right mouse button.  Your implementation doesn't need to work exactly the same way, but it should allow similar functionality.
-
-<b>Important</b>: Make sure that you have the sequential and parallel computation working before you try creating a GUI.
+<b>Important</b>: Make sure that you have the original assignment fully working before taking on the extra credit portion.
 
 Submitting
 ==========
 
-Save the project (**CS201\_Assign05**) to a zip file by right-clicking it and choosing
+Save the project (**CS201\_Assign06**) to a zip file by right-clicking it and choosing
 
 > **Export...&rarr;Archive File**
 
-Upload the saved zip file to the Marmoset server as **assign05**. The server URL is
+Upload the saved zip file to the Marmoset server as **assign06**. The server URL is
 
 > <https://cs.ycp.edu/marmoset/>
