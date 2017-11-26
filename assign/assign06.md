@@ -18,46 +18,18 @@ Your Task
 
 Your task is to implement a color chooser for the [Mandelbrot Set](http://en.wikipedia.org/wiki/Mandelbrot_set) renderer from [CS201 Assignment 5](assign05.html).
 
-Here a couple of images captured from the Mandelbrot Set rendered using the color map you will be implementing for this assigmment.
+Here a couple of images captured from the Mandelbrot Set rendered using the color map you will be implementing for this assigmment (click to see larger version).
 
 > <a href="img/assign06/MantaRayAndSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/MantaRayAndSeahorses.png" /></a>
 > <a href="img/assign06/SpiralSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/SpiralSeahorses.png" /></a>
 
-The program should prompt the user for a pair of x,y coordinates specifying corners of a rectangle in the x/y plane. The program should also prompt the user to enter the name of a file ending with the ".png" file extension. Once this input has been entered, the program should render a 600 pixel by 600 pixel image which visualizes the specified region of the Mandelbrot set.
+You will be creating a class that will be called from a supplied rendering program.  You will be able to use the rendering program to test your color mapping implementation, and explore the Mandelbrot Set rendering.  You will also be adding JUnit test cases to thoroughly test the color mapping class.  Expected values for each of the three methods you are to implement are supplied, along with an example JUnit test case for you to use as an example for the additional test cases you need to provide.
 
-Example session (user input in **bold**):
+The initial rendering should look like this, based on an 800 x 800 image, and maximum iteration count of 2000 (click to see larger version):
 
-<pre>
-Please enter coordinates of region to render:
-  x1: <b>-1.286667</b>
-  y1: <b>-0.413333</b>
-  x2: <b>-1.066667</b>
-  y2: <b>-0.193333</b>
-Output filename: <b>output.png</b>
-Working...
-Output file written successfully!
-</pre>
+> <a href="img/assign06/FullMandelbrotSet.png"><img style="width: 300px; height: 300px;" src="img/assign06/FullMandelbrotSet.png" /></a>
 
-The output file generated should be a PNG image file that looks something like this (click to see larger version):
-
-> <a href="img/assign05/output.png"><img style="width: 300px; height: 300px;" src="img/assign05/output.png" /></a>
-
-The exact appearance of the image will depend on how you choose to map the number of iterations at the sampled points to colors. See the next section for details.
-
-The Mandelbrot Set
-==================
-
-The Mandelbrot set is a fractal: a mathematical object that is self-similar at all scales. It is defined as follows:
-
--   Each point on the x/y plane is interpreted as a [complex number](http://en.wikipedia.org/wiki/Complex_number), where x is the real part and y is the imaginary part.
-
--   A point (x,y) is considered to be in the set if, for its corresponding complex number C the equation
-
-    > Z<sub>n+1</sub> = (Z<sub>n</sub>)<sup>2</sup> + C
-
-    can be iterated any number of times without the magnitude of Z ever becoming greater than 2.0. The initial value of Z (Z<sub>0</sub>) is (0+0i).
-
-Note that the magnitude of a complex number is the square root of the sum of the squares of its real and imaginary components. See the Wikipedia article linked above for an explanation of how to add and multiply complex numbers.
+Refer back to [CS201 Assignment 5](assign05.html) for the description and details for the Mandelbrot Set.
 
 Important Hint
 --------------
