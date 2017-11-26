@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Assignment g: Mandelbrot Set Color Mapping"
+title: "Assignment 6: Mandelbrot Set Color Mapping"
 ---
 
 **Due**: Tuesday, December, 12th by 11:59 PM
@@ -16,7 +16,7 @@ You should see a project called **CS201\_Assign06** in the Package Explorer. You
 Your Task
 =========
 
-Your task is to implement a renderer for the [Mandelbrot Set](http://en.wikipedia.org/wiki/Mandelbrot_set), using [parallel computation](../lectures/lecture17.html) to speed up the rendering process.
+Your task is to implement a color chooser for the [Mandelbrot Set](http://en.wikipedia.org/wiki/Mandelbrot_set) renderer that you implemented in [CS201 Assignment 5](assign05.html).
 
 <blockquote style="text-align: center;">
 <img alt="Exploit all the cores!" src="img/assign05/exploitAllTheCores.jpg">
