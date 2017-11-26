@@ -18,9 +18,7 @@ Your Task
 
 Your task is to implement a color chooser for the [Mandelbrot Set](http://en.wikipedia.org/wiki/Mandelbrot_set) renderer that you implemented in [CS201 Assignment 5](assign05.html).
 
-<blockquote style="text-align: center;">
-<img alt="Manta Ray and Seahorses" src="img/assign06/MantaRayAndSeaHorses.png">
-<br>From the color mapping you will be creating</blockquote>
+> <a href="img/assign06/MantaRayAndSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/MantaRayAndSeahorses.png" /></a>
 
 The program should prompt the user for a pair of x,y coordinates specifying corners of a rectangle in the x/y plane. The program should also prompt the user to enter the name of a file ending with the ".png" file extension. Once this input has been entered, the program should render a 600 pixel by 600 pixel image which visualizes the specified region of the Mandelbrot set.
 
