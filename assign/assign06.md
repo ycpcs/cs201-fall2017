@@ -41,11 +41,11 @@ The **ColorMappingColorChooser** class has been supplied.  Your task is to finis
 {% highlight java %}
 	public TreeMap<Integer, Integer> createIterCountMap(int[][] iterCounts) {
         // Run through the iterCounts array passed to the method, and create
-		// a map of the distinct iterCount values, along with the number of
-		// occurrences of each iterCount value.  This Map will be used to
-		// create the iterSpectrumMap
-		
-		// TODO: supply implementation here...
+        // a map of the distinct iterCount values, along with the number of
+        // occurrences of each iterCount value.  This Map will be used to
+        // create the iterSpectrumMap
+
+        // TODO: supply implementation here...
 
         // now we have a mapping of each iterCount with its respective frequency
 		return iterCountMap;
@@ -53,28 +53,28 @@ The **ColorMappingColorChooser** class has been supplied.  Your task is to finis
 
     public HashMap<Integer, Integer> createIterSpectrumMap(int[][] iterCounts) {
         // Run through the iterCountMap, and calculate the relative location
-		// of each unique iterCount within the Color Spectrum, and map that
-		// location to each iterCount from the iterCountMap.  This is not the
-		// Color, but rather the position in the Color Spectrum for each
-		// iterCount value.  This Map will be used to create the iterColorMap.
+        // of each unique iterCount within the Color Spectrum, and map that
+        // location to each iterCount from the iterCountMap.  This is not the
+        // Color, but rather the position in the Color Spectrum for each
+        // iterCount value.  This Map will be used to create the iterColorMap.
 
-		// TODO: supply implementation here...		
+        // TODO: supply implementation here...		
 
-		// now we have a mapping for each iterCount to its respective
+        // now we have a mapping for each iterCount to its respective
         // location in the color spectrum
 		return iterSpectrumMap;
     }
 
     public HashMap<Integer, Color> createIterColorMap(int[][] iterCounts) {
         // Run through the iterSpectrumMap and calculate the RGB color values
-		// based on each iterCount's relative spectrum location from the
-		// iterSpectrum Map.  This will map the iterCounts from iterCountMap
-		// to RGB color values
-		
-		// TODO: supply implementation here...	
-		
+        // based on each iterCount's relative spectrum location from the
+        // iterSpectrum Map.  This will map the iterCounts from iterCountMap
+        // to RGB color values
+
+        // TODO: supply implementation here...	
+
         // now we have a mapping from each distinct iterCount to its respective
-		// Color, based on its relative frequency of occurrence
+        // Color, based on its relative frequency of occurrence
 		return iterColorMap;		
     }
 }
