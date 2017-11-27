@@ -18,7 +18,7 @@ Your Task
 
 Your task is to implement a color chooser for the [Mandelbrot Set](http://en.wikipedia.org/wiki/Mandelbrot_set) renderer from [CS201 Assignment 5](assign05.html).
 
-Here a couple of images captured from the Mandelbrot Set rendered using the color map you will be implementing for this assigmment (click to see larger versions):
+Here are a of couple of images captured from the Mandelbrot Set rendered using the color map you will be implementing for this assigmment (click to see larger versions):
 
 > <a href="img/assign06/MantaRayAndSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/MantaRayAndSeahorses.png" /></a>
 > <a href="img/assign06/SpiralSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/SpiralSeahorses.png" /></a>
