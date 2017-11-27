@@ -39,7 +39,7 @@ The **ColorMappingColorChooser** class has been supplied.  Your task is to finis
 
 
 {% highlight java %}
-	public TreeMap<Integer, Integer> createIterCountMap(int[][] iterCounts) {
+    public TreeMap<Integer, Integer> createIterCountMap(int[][] iterCounts) {
         // Run through the iterCounts array passed to the method, and create
         // a map of the distinct iterCount values, along with the number of
         // occurrences of each iterCount value.  This Map will be used to
@@ -48,7 +48,7 @@ The **ColorMappingColorChooser** class has been supplied.  Your task is to finis
         // TODO: supply implementation here...
 
         // now we have a mapping of each iterCount with its respective frequency
-		return iterCountMap;
+        return iterCountMap;
     }
 
     public HashMap<Integer, Integer> createIterSpectrumMap(int[][] iterCounts) {
@@ -62,7 +62,7 @@ The **ColorMappingColorChooser** class has been supplied.  Your task is to finis
 
         // now we have a mapping for each iterCount to its respective
         // location in the color spectrum
-		return iterSpectrumMap;
+        return iterSpectrumMap;
     }
 
     public HashMap<Integer, Color> createIterColorMap(int[][] iterCounts) {
@@ -75,9 +75,8 @@ The **ColorMappingColorChooser** class has been supplied.  Your task is to finis
 
         // now we have a mapping from each distinct iterCount to its respective
         // Color, based on its relative frequency of occurrence
-		return iterColorMap;		
+        return iterColorMap;		
     }
-}
 {% endhighlight %}
 
 You will need to think about what fields to add and how to implement each operation.
