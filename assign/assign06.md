@@ -25,41 +25,57 @@ Here are a of couple of images captured from the Mandelbrot Set rendered using t
 
 You will be creating a class that will be called from a supplied rendering program.  You will be able to use the rendering program to test your color mapping implementation, and explore the Mandelbrot Set.  The program allows zooming in by dragging the mouse, and zooming back out by clicking the right mouse button.
 
-You will also be adding JUnit test cases to thoroughly test the color mapping class.  Expected values for each of the three methods you are to implement are supplied, along with an example JUnit test case for you to use as an example for the additional test cases you need to provide.
+You will also be adding JUnit test cases to thoroughly test the color mapping class.  Expected values for each of the three methods you are to implement are supplied, along with JUnit test cases for you to use as examples for the additional test cases you need to provide.
 
-If you have implemented the color mapping class correctly, the initial rendering of the full Mandelbrot Set, from (-2,2) to (2,-2), should look like this, based on an 800 x 800 image, and maximum iteration count of 2000 (click to see a larger version):
+If you have implemented the color mapping class correctly, the initial rendering of the full Mandelbrot Set, from (-2,2) to (2,-2), will look like this, based on an 800 x 800 image, and maximum iteration count of 2000 (click to see a larger version):
 
 > <a href="img/assign06/FullMandelbrotSet.png"><img style="width: 300px; height: 300px;" src="img/assign06/FullMandelbrotSet.png" /></a>
 
 Refer back to [CS201 Assignment 5](assign05.html) for the description and details for the Mandelbrot Set.
 
-Important Hint
+ColorMappingColorChooser class
 --------------
+The **ColorMappingColorChooser** class has been supplied.  Your task is to finish implementing the following three methods.  Additional implementation details are provided below.
 
-Because the core computation is based on complex numbers, having a class to represent complex numbers will make implementing the computation much easier. The class should look something like this:
 
 {% highlight java %}
-public class Complex {
-    // ...fields...
+	public TreeMap<Integer, Integer> createIterCountMap(int[][] iterCounts) {
+        // Run through the iterCounts array passed to the method, and create
+		// a map of the distinct iterCount values, along with the number of
+		// occurrences of each iterCount value.  This Map will be used to
+		// create the iterSpectrumMap
+		
+		// TODO: supply implementation here...
 
-    // Constructor
-    public Complex(double real, double imag) {
-        // ...
+        // now we have a mapping of each iterCount with its respective frequency
+		return iterCountMap;
     }
 
-    // add given complex number to this one, returning the Complex result
-    public Complex add(Complex other) {
-        // ...
+    public HashMap<Integer, Integer> createIterSpectrumMap(int[][] iterCounts) {
+        // Run through the iterCountMap, and calculate the relative location
+		// of each unique iterCount within the Color Spectrum, and map that
+		// location to each iterCount from the iterCountMap.  This is not the
+		// Color, but rather the position in the Color Spectrum for each
+		// iterCount value.  This Map will be used to create the iterColorMap.
+
+		// TODO: supply implementation here...		
+
+		// now we have a mapping for each iterCount to its respective
+        // location in the color spectrum
+		return iterSpectrumMap;
     }
 
-    // multiply given complex number by this one, returning the Complex result
-    public Complex multiply(Complex other) {
-        // ...
-    }
-
-    // get the magnitude of this complex number
-    public double getMagnitude() {
-        // ...
+    public HashMap<Integer, Color> createIterColorMap(int[][] iterCounts) {
+        // Run through the iterSpectrumMap and calculate the RGB color values
+		// based on each iterCount's relative spectrum location from the
+		// iterSpectrum Map.  This will map the iterCounts from iterCountMap
+		// to RGB color values
+		
+		// TODO: supply implementation here...	
+		
+        // now we have a mapping from each distinct iterCount to its respective
+		// Color, based on its relative frequency of occurrence
+		return iterColorMap;		
     }
 }
 {% endhighlight %}
@@ -178,15 +194,14 @@ Your submission will be graded according to the following criteria:
 - createIterCountMap:             20%
 - createIterSpectrumMap:          20%
 - createIterColorMap:             20%
-- createIterSpectrumMapTest:      10%
-- createIterColorMapTest:         10%
-- colorMappingColorChooserTest:   10%
+- createIterSpectrumMapTest:      15%
+- createIterColorMapTest:         15%
 - Design, coding style, comments: 10%
 
 Extra Credit
 -------------------
 
-For up to 25 points of extra credit, implement an additional color mapping that maps the existing iterCOunts uniformly across the color spectrum.  In other words, rather than distributing them based on their relative size, with larger iterCount entries being allocated a wider region of the color spectrum, allocate the same portion of the spectrum to each existing iterCount in the iterCountMap.
+For up to 25 points of extra credit, implement an additional color mapping that maps the existing iterCounts uniformly across the color spectrum.  In other words, rather than distributing them based on their relative size, with larger iterCount entries being allocated a wider region of the color spectrum, allocate the same portion of the spectrum to each existing iterCount in the iterCountMap.
 
 To get the full credit, you will also have to implement a full set of test cases for each new method that you create.
 
