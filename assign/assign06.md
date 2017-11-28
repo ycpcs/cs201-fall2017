@@ -137,12 +137,25 @@ and is assigned to the **iterColorMap** with its respective ** iterCount** key.
 
 JUnit Test Cases
 ===========
+Under the **junit** folder included with the project is the skeleton for creating the JUnit test cases for this assignment.  The test set-up has been provided for you, including a complete set of expected results for the three Maps that you will be creating.  The **set-up** and test cases for the **ColorMappingColorChooser** constructor and the **createIterCountMap()** method have also been provided to serve as examples for creating the test cases for the remaining two methods: **createIterSpectrumMap()** and **createIterColorMap()**.
 
-Under the **junit** folder included with the project is the skeleton for creating the JUnit test cases for this assignment.  The test set-up has been provided for you, including a complete set of expected results for the three Maps that you will be creating.  The first test case has also been provided as an example for creating the test cases for the other two methods.
+Testing createIterSpectrumMap()
+--------------------------------
+In order to completely test the **createIterSpectrumMap()** method, you will need to verify that the **iterSpectrumMap** contents (keys and values) exactly match the expected values contained in **testIterSpectrumMap**:
+- **iterSpectrumMap** has the expected number of keys
+- **iterSpectrumMap** has the identical set of expected **iterCount** keys
+- **iterSpectrumMap** has the identical set of expected spectrum locations mapped to those keys
+
+Testing createIterColorMap()
+--------------------------------
+In order to completely test the **createIterColorMap()** method, you will need to verify that the **iterColorMap** contents (keys and values) exactly match the expected values contained in **testIterColorMap**:
+- **iterColorMap** has the expected number of keys
+- **iterColorMap** has the identical set of expected **iterCount** keys
+- **iterColorMap** has the identical set of expected Colors mapped to those keys
+
 
 Grading Criteria
 ================
-
 Your submission will be graded according to the following criteria:
 
 - createIterCountMap:             20%
@@ -154,12 +167,11 @@ Your submission will be graded according to the following criteria:
 
 Extra Credit
 -------------------
+For up to 25 points of extra credit, implement an additional color mapping scheme (**ExtraColorMappingColorChooser** class), that maps the **iterCounts** uniformly across the color spectrum.  In other words, rather than distributing them based on their relative size, with larger **iterCount** entries being allocated a wider region of the color spectrum, allocate the same portion of the spectrum to each existing **iterCount** in the **iterCountMap**.  Example: if there were 10 distinct **iterCounts** across 60 points to be rendered, then the iterCounts would be spaced 6 positions apart, centered at 3, 9, 15, etc...
 
-For up to 25 points of extra credit, implement an additional color mapping that maps the existing iterCounts uniformly across the color spectrum.  In other words, rather than distributing them based on their relative size, with larger iterCount entries being allocated a wider region of the color spectrum, allocate the same portion of the spectrum to each existing iterCount in the iterCountMap.
+To get the full extra credit, you will also have to implement a full set of JUnit test cases for each new method that you create.
 
-To get the full credit, you will also have to implement a full set of test cases for each new method that you create.
-
-<b>Important</b>: Make sure that you have the original assignment fully working before taking on the extra credit portion.
+<b>Important</b>: Make sure that you have the original assignment fully working before taking on the extra credit portion.  The extra credit mapping creates a separate color mapping selection when the rendering program first starts.
 
 Submitting
 ==========
