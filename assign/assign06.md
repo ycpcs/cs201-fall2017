@@ -25,9 +25,9 @@ Here are a of couple of images captured from the Mandelbrot Set rendered using t
 
 You will be creating a class that will be called from a supplied rendering program.  You will be able to use the rendering program to test your color mapping implementation, and explore the Mandelbrot Set.  The program allows zooming in by dragging the mouse, and zooming back out by clicking the right mouse button.
 
-You will also be adding JUnit test cases to thoroughly test the color mapping class.  Expected values for each of the three methods you are to implement are supplied, along with JUnit test cases for you to use as examples for the additional test cases you need to provide.
+You will also be adding JUnit test cases to thoroughly test the new color mapping class.  Expected values for each of the three methods you are to implement are supplied, along with JUnit test cases for you to use as examples for the additional test cases you need to provide.
 
-If you have implemented the color mapping class correctly, the initial rendering of the full Mandelbrot Set, from (-2,2) to (2,-2), will look like this, based on an 800 x 800 image, and maximum iteration count of 2000 (click to see a larger version):
+If you have implemented the new color mapping class correctly, the initial rendering of the full Mandelbrot Set, from (-2,2) to (2,-2), will look like this, based on an 800 x 800 image, and maximum iteration count of 2000 (click to see a larger version):
 
 > <a href="img/assign06/FullMandelbrotSet.png"><img style="width: 300px; height: 300px;" src="img/assign06/FullMandelbrotSet.png" /></a>
 
@@ -35,8 +35,9 @@ Refer back to [CS201 Assignment 5](assign05.html) for the description and detail
 
 ColorMappingColorChooser class
 --------------
-The **ColorMappingColorChooser** class has been supplied.  Your task is to finish implementing the following three methods.  Additional implementation details are provided below.
+The **ColorMappingColorChooser** class has been supplied.  It implements the **ColorChooser** interface, which has a single method: **getColor()**.  After you have completed the following tasks, **getColor()** will return colors based on the frequency of occurrence of each iterCount.
 
+Your task is to finish implementing the following three methods, plus provide JUnit test cases for the **createIterSpectrumMap()** and **createIterColorMap()** methods.  Additional implementation details are provided below.
 
 {% highlight java %}
     public TreeMap<Integer, Integer> createIterCountMap(int[][] iterCounts) {
@@ -79,15 +80,6 @@ The **ColorMappingColorChooser** class has been supplied.  Your task is to finis
     }
 {% endhighlight %}
 
-You will need to think about what fields to add and how to implement each operation.
-
-Once your **Complex** class is ready, you can iterate the equation as follows:
-
-{% highlight java %}
-z = z.multiply(z).add(c);
-{% endhighlight %}
-
-This assumes that you have variables **z** and **c** that refer to instances of the **Complex** class.
 
 Creating a task class
 ---------------------
