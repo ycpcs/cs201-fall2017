@@ -125,9 +125,9 @@ combined with the **sine** and **cosine** trig functions to generate smooth tran
 
         red = sin(spectrum location / maxLocation * PI/2) * 255
 		
-		green = sin(spectrum locatoin / maxLocation * PI) * 255
+        green = sin(spectrum locatoin / maxLocation * PI) * 255
 		
-		blue = cos(spectrum location / maxLocation * PI/2) * 255
+        blue = cos(spectrum location / maxLocation * PI/2) * 255
 		
 The color value is then created from:
 
