@@ -81,71 +81,17 @@ Your task is to finish implementing the following three methods, plus provide JU
 {% endhighlight %}
 
 
-Creating a task class
----------------------
-
-You should create a task class that computes the iteration counts for a region of the image.
-
-Here is a suggested skeleton:
-
-{% highlight java %}
-public class MandelbrotTask implements Runnable {
-    private double x1, y1, x2, y2;
-    private int startCol, endCol, startRow, endRow;
-    private int[][] iterCounts;
-
-    public MandelbrotTask(double x1, double y1, double x2, double y2,
-                          int startCol, int endCol, int startRow, int endRow,
-                          int[][] iterCounts) {
-        this.x1 = x1;
-        this.y1 = y1;
-        this.x2 = x2;
-        this.y2 = y2;
-        this.startCol = startCol;
-        this.endCol = endCol;
-        this.startRow = startRow;
-        this.endRow = endRow;
-        this.iterCounts = iterCounts;
-    }
-
-    public void run() {
-        for (int i = startRow; i < endRow; i++) {
-            for (int j = startCol; j < endCol; j++) {
-                Complex c = getComplex(i, j);
-                int iterCount = computeIterCount(c);
-                iterCounts[i][j] = iterCount;
-            }
-        }
-    }
-
-    // TODO: implement getComplex and computeIterCount methods
-}
-{% endhighlight %}
-
-The idea is that a **MandelbrotTask** object will compute iteration counts for the region of the image with rows from **startRow** (inclusive) to **endRow** (exclusive) and columns from **startCol** (inclusive) to **endCol** (exclusive). The region of the complex plane is specified by **x1**, **y1**, **x2**, and **y2**.  The **iterCounts** array is the single global array used to store the iteration counts for the overall image (where the first dimension is rows and the second dimension is columns).
-
-From the **main** method, you could use a **MandelbrotTask** object to compute all of the iteration counts as follows:
-
-{% highlight java %}
-int[][] iterCounts = new int[HEIGHT][WIDTH];
-MandelbrotTask task = MandelbrotTask(x1, y1, x2, y2, 0, WIDTH, 0, HEIGHT, iterCounts);
-task.run();
-{% endhighlight %}
-
-Note that this approach is purely sequential, and will not take advantage of multiple CPU cores.
-
-Rendering the Mandelbrot Set
+How the ColorMappingColorChooser Class Works
 ============================
 
-Rendering the Mandelbrot set is done by assigning a color to sampled points in a region of the x/y plane.
+In Asssignment 5, you were tasked with creating a rendering program for the Mandelbrot Set.  Part of that assignment was to develop an algorithm for mapping **iterCount** values to RGB colors.  Since the **iterCount** values do not distribute uniformly across all possible values, the color mapping task is not as straight-forward as it initially seems.  Many of the **iterCount** values tend to bunch up into tight groups, and a linear mapping of the **iterCount** values to RGB hues is not particularly effective in producing interesting color schemes.
 
-Points that are in the Mandelbrot set should be rendered as black.
+The **ColorMappingColorChooser** class addresses the issue of the non-uniform distribution of the iterCount values by mapping colors to **iterCount** values based on their frequency of occurrence, rather than strictly on their value.  The frequency of occurence of each **iterCount** value determines the width of the color spectrum that applies to that **iterCount**.  The spectrum width determines the distance between the colors assigned to the distinct **iterCount** values.
 
-Points that are outside the Mandelbrot set should be rendered using a color that indicates how many times the equation was iterated before the magnitude of Z reached 2.0. In my implementation, purple is used for points where the magnitude of Z reached 2.0 in 1 iteration. Then, as higher numbers of iterations are needed for the magnitude of Z to reach 2.0, my renderer chooses colors that transition smoothly from purple, to blue, to green, to yellow, to orange, and last to red (for points that are very close to the set, but not within it.)
-
-You may choose any assignment of colors to numbers of iterations, as long as the each color is based on the number of iterations.
-
-So, the 600 by 600 image you render will pick sample points uniformly spaced in a 600 by 600 grid which overlays the region of the x/y plane specified by the user, and set an image color for each corresponding pixel based on whether or not the point is in the set, and if not, how many iterations were required to show that it is not in the set.
+Creating an instance of **ColorMappingColorChooser** requires the creation of three separate maps:
+- **iterCountMap** maps each distinct **iterCount** value to the number of times it occurs in the **iterCounts** array.  This determines the frequency of occurrence and the relative width of the spectrum band (distance between the adjacent **iterCounts**).
+- **iterSpectrumMap** maps each distinct iterCount value to the relative location in the color spectrum.  The values in the iterCountMap are used to find the locations for each iterCount in the color spectrum.  The **iterCounts** are sorted in ascending order and widths of their spectrum bands are summed together to determine the relative location of each **iterCount** in the color spectrum.  Each iterCount is then centered within its spectrum band.
+- **iterColorMap** maps each distinct **iterCount** value to its RGB color.  The colors are calculated using the trignometric **sine** and **cosine** functions to provide smooth transitions between red, green, and blue.
 
 Rendering An Image, Saving It
 =============================
