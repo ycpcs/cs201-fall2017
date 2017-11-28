@@ -11,23 +11,23 @@ Getting Started
 
 Download [CS201\_Assign06.zip](CS201_Assign06.zip) and import it into your Eclipse workspace (**File&rarr;Import&rarr;General&rarr;Existing projects into workspace&rarr;Archive file**.)
 
-You should see a project called **CS201\_Assign06** in the Package Explorer. Your will be making changes to the **ColorMappingColorChooser** class. You will also be adding test cases to the **ColorMappingColorChooserTest** class.  You should add any additional classes or methods needed to complete the assignment.
+You should see a project called **CS201\_Assign06** in the Package Explorer. You will be making changes to the **ColorMappingColorChooser** class. You will also be adding test cases to the **ColorMappingColorChooserTest** class.  You should add any additional classes or methods needed to complete the assignment.
 
 Your Task
 =========
 
 Your task is to implement a color chooser for the [Mandelbrot Set](http://en.wikipedia.org/wiki/Mandelbrot_set) renderer from [CS201 Assignment 5](assign05.html).
 
-Here are a of couple of images captured from the Mandelbrot Set rendered using the color map you will be implementing for this assigmment (click to see larger versions):
+Here are a couple of images captured from the Mandelbrot Set rendered using the color map that you will be implementing for this assigmment (click to see larger images):
 
 > <a href="img/assign06/MantaRayAndSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/MantaRayAndSeahorses.png" /></a>
 > <a href="img/assign06/SpiralSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/SpiralSeahorses.png" /></a>
 
-You will be creating a class that will be called from a supplied rendering program.  You will be able to use the rendering program to test your color mapping implementation, and explore the Mandelbrot Set.  The program allows zooming in by dragging the mouse, and zooming back out by clicking the right mouse button.
+You will be creating a class that will be called from a supplied rendering program.  You will be able to use the program to explore the Mandelbrot Set rendered with the ColorMappingColorChooser you will be implementing.  The program allows zooming in by dragging the mouse, and zooming back out by clicking the right mouse button.
 
 You will also be adding JUnit test cases to thoroughly test the new color mapping class.  Expected values for each of the three methods you are to implement are supplied, along with JUnit test cases for you to use as examples for the additional test cases you need to provide.
 
-If you have implemented the new color mapping class correctly, the initial rendering of the full Mandelbrot Set, from (-2,2) to (2,-2), will look like this, based on an 800 x 800 image, and maximum iteration count of 2000 (click to see a larger version):
+If you have implemented the new color mapping class correctly, the initial rendering of the full Mandelbrot Set, from (-2,2) to (2,-2), will look like this, based on an 800 x 800 image, and maximum iteration count of 2000 (click to see a larger image):
 
 > <a href="img/assign06/FullMandelbrotSet.png"><img style="width: 300px; height: 300px;" src="img/assign06/FullMandelbrotSet.png" /></a>
 
@@ -82,7 +82,7 @@ Your task is to finish implementing the following three methods, plus provide JU
 
 
 How the ColorMappingColorChooser Class Works
-============================
+=============================================
 
 In Asssignment 5, you were tasked with creating a rendering program for the Mandelbrot Set.  Part of that assignment involved developing an algorithm for mapping **iterCount** values to RGB colors.  Since the **iterCount** values do not distribute uniformly across all possible values, the color mapping task is not as straight-forward as it initially seems.  Many of the **iterCount** values tend to bunch up into tight groups, and a linear mapping of the **iterCount** values to RGB hues is not particularly effective in producing interesting color schemes.
 
