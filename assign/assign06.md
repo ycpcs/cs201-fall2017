@@ -84,39 +84,36 @@ Your task is to finish implementing the following three methods, plus provide JU
 How the ColorMappingColorChooser Class Works
 ============================
 
-In Asssignment 5, you were tasked with creating a rendering program for the Mandelbrot Set.  Part of that assignment was to develop an algorithm for mapping **iterCount** values to RGB colors.  Since the **iterCount** values do not distribute uniformly across all possible values, the color mapping task is not as straight-forward as it initially seems.  Many of the **iterCount** values tend to bunch up into tight groups, and a linear mapping of the **iterCount** values to RGB hues is not particularly effective in producing interesting color schemes.
+In Asssignment 5, you were tasked with creating a rendering program for the Mandelbrot Set.  Part of that assignment involved developing an algorithm for mapping **iterCount** values to RGB colors.  Since the **iterCount** values do not distribute uniformly across all possible values, the color mapping task is not as straight-forward as it initially seems.  Many of the **iterCount** values tend to bunch up into tight groups, and a linear mapping of the **iterCount** values to RGB hues is not particularly effective in producing interesting color schemes.
 
-The **ColorMappingColorChooser** class addresses the issue of the non-uniform distribution of the iterCount values by mapping colors to **iterCount** values based on their frequency of occurrence, rather than strictly on their value.  The frequency of occurence of each **iterCount** value determines the width of the color spectrum that applies to that **iterCount**.  The spectrum width determines the distance between the colors assigned to the distinct **iterCount** values.
+The **ColorMappingColorChooser** class addresses the issue of the non-uniform distribution of the **iterCount** values by mapping colors to **iterCount** values based on their frequency of occurrence, rather than strictly on their value.  The frequency of occurence of each **iterCount** value determines the width of the color spectrum that applies to that **iterCount**.  The spectrum width determines the distance between the colors assigned to the distinct **iterCount** values.
 
 Creating an instance of **ColorMappingColorChooser** requires the creation of three separate maps:
 - **iterCountMap** maps each distinct **iterCount** value to the number of times it occurs in the **iterCounts** array.  This determines the frequency of occurrence and the relative width of the spectrum band (distance between the adjacent **iterCounts**).
-- **iterSpectrumMap** maps each distinct **iterCount** value to the relative location in the color spectrum.  The values in the **iterCountMap** are used to find the locations for each **iterCount** in the color spectrum.  The **iterCounts** are sorted in ascending order and widths of their spectrum bands are summed together to determine the relative location of each **iterCount** in the color spectrum.  Each iterCount is then centered within its spectrum band.
-- **iterColorMap** maps each distinct **iterCount** value to its RGB color.  The relative location in the color spectrum for each **iterCount** value is pulled from the **iterSpectrumMap** which is used inside the trignometric **sine** and **cosine** functions to provide smooth transitions between red, green, and blue.
+- **iterSpectrumMap** maps each distinct **iterCount** value to the relative location in the color spectrum.  The values in the **iterCountMap** are used to find the locations for each **iterCount** in the color spectrum.  The **iterCounts** are sorted in ascending order and the widths of the prior spectrum bands are summed together to determine the relative location of each **iterCount** in the color spectrum.  Each **iterCount** is then centered within its spectrum band.
+- **iterColorMap** maps each distinct **iterCount** value to its RGB color.  The relative location in the color spectrum for each **iterCount** value is pulled from the **iterSpectrumMap** and is then used inside the trignometric **sine** and **cosine** functions to provide smooth transitions between red, green, and blue.
 
-Rendering An Image, Saving It
+Creating the iterCountMap
 =============================
+The **createIterCountMap()** method accepts a reference to the **iterCounts** array and returns a reference to the **iterCountMap** that it creates from the **iterCounts** array contents.  The **iterCountMap** correlates each distinct **iterCount** with the number of times it occurs in the **iterCounts** array.
 
-The Java **BufferedImage** class allows you to render an image:
+The method must iterates through the *iterCounts** array, and it will either encounter a new entry (and initialize the occurrence count for that entry) or update the occurrence count for an existing entry.  When iteration is complete, the method should return a reference to the newly populated map.
 
-{% highlight java %}
-BufferedImage bufferedImage = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_ARGB);
-Graphics g = bufferedImage.getGraphics();
+Creating the iterSpectrumMap
+==============================
+The **createIterSpectrumMap() method accepts a reference to the **iterCounts** array and returns a reference to the **iterSpectrumMap** that it creates from the **iterCountMap** contents.  The **iterSpectrumMap** correlates each distinct **iterCount** with its location in the color spectrum that **createIterColorMap** will create.
 
-// ... use g to perform drawing operations ...
+The method must iterate through the keys of the **iterCountMap**, in ascending order, and accumulate the location of each **iterCount** from the beginning of the color spectrum.  The occurrence count for each **iterCountMap** key determines the width of the spectrum band that the **iterCount** occupies.  The sum of the prior occurences counts (widths) determines the location of the leading edge of the next **iterCount* spectrum band.  Each **iterCount** is then centered in its spectrum band:
 
-g.dispose();
-{% endhighlight %}
+       centered location = leading edge location + (width / 2) + 1
 
-Once the image has been rendered into the **BufferedImage** object, you can write it to a file as follows:
+The above result is then stored as the value in the **iterSpectrumMap** with its respective **iterCount** key.
 
-{% highlight java %}
-OutputStream os = new BufferedOutputStream(new FileOutputStream(fileName));
-try {
-    ImageIO.write(bufferedImage, "PNG", os);
-} finally {
-    os.close();
-}
-{% endhighlight %}
+At the end of iteration, the width of the entire spectrum (the sum of all the values in the **iterSpectrumMap** is stored in the class field **maxLocation**.  The method then returns a reference to the newly populated map. 
+
+Creating the iterColorMap
+===========================
+
 
 JUnit Test Cases
 ===========
