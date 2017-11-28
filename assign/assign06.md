@@ -90,8 +90,8 @@ The **ColorMappingColorChooser** class addresses the issue of the non-uniform di
 
 Creating an instance of **ColorMappingColorChooser** requires the creation of three separate maps:
 - **iterCountMap** maps each distinct **iterCount** value to the number of times it occurs in the **iterCounts** array.  This determines the frequency of occurrence and the relative width of the spectrum band (distance between the adjacent **iterCounts**).
-- **iterSpectrumMap** maps each distinct iterCount value to the relative location in the color spectrum.  The values in the iterCountMap are used to find the locations for each iterCount in the color spectrum.  The **iterCounts** are sorted in ascending order and widths of their spectrum bands are summed together to determine the relative location of each **iterCount** in the color spectrum.  Each iterCount is then centered within its spectrum band.
-- **iterColorMap** maps each distinct **iterCount** value to its RGB color.  The colors are calculated using the trignometric **sine** and **cosine** functions to provide smooth transitions between red, green, and blue.
+- **iterSpectrumMap** maps each distinct **iterCount** value to the relative location in the color spectrum.  The values in the **iterCountMap** are used to find the locations for each **iterCount** in the color spectrum.  The **iterCounts** are sorted in ascending order and widths of their spectrum bands are summed together to determine the relative location of each **iterCount** in the color spectrum.  Each iterCount is then centered within its spectrum band.
+- **iterColorMap** maps each distinct **iterCount** value to its RGB color.  The relative location in the color spectrum for each **iterCount** value is pulled from the **iterSpectrumMap** which is used inside the trignometric **sine** and **cosine** functions to provide smooth transitions between red, green, and blue.
 
 Rendering An Image, Saving It
 =============================
