@@ -137,7 +137,7 @@ and is assigned to the **iterColorMap** with its respective ** iterCount** key.
 
 The RGB color generation graph for the above scheme is shown below:
 
-> <a href="img/assign06/TrigColorGeneration.png"><img style="width: 300px; height: 300px;" src="img/assign06/TrigColorGeneration.png" /></a>
+> <a href="img/assign06/TrigColorGeneration.png"><img style="width: 600px; height: 250px;" src="img/assign06/TrigColorGeneration.png" /></a>
 
 JUnit Test Cases
 ===========
@@ -161,11 +161,11 @@ In order to completely test the **createIterColorMap()** method, you will need t
 
 Test iterCounts Array Contents (expected results)
 --------------------------------------------------
-> <a href="img/assign06/TestIterContsArrayContents.png"><img style="width: 300px; height: 300px;" src="img/assign06/TestIterCountsArrayContents.png" /></a>
+> <a href="img/assign06/TestIterContsArrayContents.png"><img style="width: 600px; height: 250px;" src="img/assign06/TestIterCountsArrayContents.png" /></a>
 
 Test Map Contents (expected results)
 -------------------------------------
-> <a href="img/assign06/TestMapContents.png"><img style="width: 300px; height: 300px;" src="img/assign06/TestMapContents.png" /></a>
+> <a href="img/assign06/TestMapContents.png"><img style="width: 600px; height: 300px;" src="img/assign06/TestMapContents.png" /></a>
 
 Grading Criteria
 ================
