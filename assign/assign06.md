@@ -161,11 +161,11 @@ In order to completely test the **createIterColorMap()** method, you will need t
 
 Test iterCounts Array Contents (expected results)
 --------------------------------------------------
-> <a href="img/assign06/TestIterContsArrayContents.png"><img style="width: 600px; height: 250px;" src="img/assign06/TestIterCountsArrayContents.png" /></a>
+> <a href="img/assign06/TestIterContsArrayContents.png"><img style="width: 700px; height: 250px;" src="img/assign06/TestIterCountsArrayContents.png" /></a>
 
 Test Map Contents (expected results)
 -------------------------------------
-> <a href="img/assign06/TestMapContents.png"><img style="width: 600px; height: 300px;" src="img/assign06/TestMapContents.png" /></a>
+> <a href="img/assign06/TestMapContents.png"><img style="width: 700px; height: 300px;" src="img/assign06/TestMapContents.png" /></a>
 
 Grading Criteria
 ================
@@ -180,7 +180,7 @@ Your submission will be graded according to the following criteria:
 
 Extra Credit
 -------------------
-For up to 25 points of extra credit, implement an additional color mapping scheme (**ExtraColorMappingColorChooser** class), that maps the **iterCounts** uniformly across the color spectrum.  In other words, rather than distributing them based on their relative size, with larger **iterCount** entries being allocated a wider region of the color spectrum, allocate the same portion of the spectrum to each existing **iterCount** in the **iterCountMap**.  Example: if there were 10 distinct **iterCounts** across 60 points to be rendered, then the iterCounts would be spaced 6 positions apart, centered at 3, 9, 15, etc...
+For up to 25 points of extra credit, also implement the **ExtraColorMappingColorChooser** class, which maps the **iterCounts** uniformly across the color spectrum.  In other words, rather than distributing them based on their relative size, with larger **iterCount** entries being allocated a wider region of the color spectrum, allocate the same portion of the spectrum to each existing **iterCount** in the **iterCountMap**.  Example: if there were 10 distinct **iterCounts** across 60 points to be rendered, then the **iterCounts** would be spaced 6 positions apart, centered at 3, 9, 15, etc...
 
 To get the full extra credit, you will also have to implement a full set of JUnit test cases for each new method that you create.
 
