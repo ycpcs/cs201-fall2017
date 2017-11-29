@@ -26,6 +26,7 @@ Welcome to the website for CS 201, Fundamentals of Computer Science II, at York 
 
 ## News
 
+* **Nov 28** &mdash; [Assignment 6](assign/assign06.html) has been posted.  It is due Tuesday, Dec 12th by 11:59 PM.
 * **Nov 27** &mdash; A solution to the third practice exam has been posted on the [Practice Exams](practice/index.html) page.
 * **Nov 20** &mdash; The third exam takes place in class on **Friday, Dec 1st**.  A practice exam has been posted on the [Practice Exams](practice/index.html) page.
 * **Nov 3** &mdash; The description of [Assignment 5](assign/assign05.html) has been updated to link to an example implementation of the extra credit GUI.
