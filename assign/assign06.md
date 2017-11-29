@@ -133,11 +133,17 @@ The color value is then created from:
 
         color = new Color(red, green, blue)
 		
-and is assigned to the **iterColorMap** with its respective ** iterCount** key.
+and is assigned to the **iterColorMap** with its respective ** iterCount** key.  
+
+The RGB color generation graph for the above scheme is shown below:
+
+> <a href="img/assign06/TrigColorGeneration.png"><img style="width: 300px; height: 300px;" src="img/assign06/TrigColorGeneration.png" /></a>
 
 JUnit Test Cases
 ===========
-Under the **junit** folder included with the project is the skeleton for creating the JUnit test cases for this assignment.  The test set-up has been provided for you, including a complete set of expected results for the three Maps that you will be creating.  The **set-up** and test cases for the **ColorMappingColorChooser** constructor and the **createIterCountMap()** method have also been provided to serve as examples for creating the test cases for the remaining two methods: **createIterSpectrumMap()** and **createIterColorMap()**.
+Under the **junit** folder included with the project is the skeleton for creating the JUnit test cases for this assignment.  The test set-up has been provided for you, including a complete set of expected results for the three Maps that you will be creating.  The test iterCounts array contents are shown below, along with the expected contents for the three Maps.  The spreadsheet used to generate the test data tables can be found [here](Assign06-JUnitTestsExpectedResults.xlsx), and you can download it and inspect the cell formulas that were used to generate the expected restuls.
+
+The **set-up** and test cases for the **ColorMappingColorChooser** constructor and the **createIterCountMap()** method have also been provided to serve as examples for creating the test cases for the remaining two methods: **createIterSpectrumMap()** and **createIterColorMap()**.
 
 Testing createIterSpectrumMap()
 --------------------------------
@@ -153,6 +159,13 @@ In order to completely test the **createIterColorMap()** method, you will need t
 - **iterColorMap** has the identical set of expected **iterCount** keys
 - **iterColorMap** has the identical set of expected Colors mapped to those keys
 
+Test iterCounts Array Contents (expected results)
+--------------------------------------------------
+> <a href="img/assign06/TestIterContsArrayContents.png"><img style="width: 300px; height: 300px;" src="img/assign06/TestIterCountsArrayContents.png" /></a>
+
+Test Map Contents (expected results)
+-------------------------------------
+> <a href="img/assign06/TestMapContents.png"><img style="width: 300px; height: 300px;" src="img/assign06/TestMapContents.png" /></a>
 
 Grading Criteria
 ================
