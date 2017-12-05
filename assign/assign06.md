@@ -5,6 +5,7 @@ title: "Assignment 6: Mandelbrot Set Color Mapping"
 
 **Due**: Tuesday, December, 12th by 11:59 PM
 
+*Update 12/5*: Added example interactive GUI
 
 Getting Started
 ===============
@@ -22,6 +23,10 @@ Here are a couple of images captured from the Mandelbrot Set rendered using the 
 
 > <a href="img/assign06/MantaRayAndSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/MantaRayAndSeahorses.png" /></a>
 > <a href="img/assign06/SpiralSeahorses.png"><img style="width: 300px; height: 300px;" src="img/assign06/SpiralSeahorses.png" /></a>
+
+You can also try running an example interactive GUI implementing the new color chooser:
+
+> [mandelbrot2-obfuscated.jar](mandelbrot2-obfuscated.jar)
 
 You will be creating a class that will be called from a supplied rendering program.  You will be able to use the program to explore the Mandelbrot Set rendered with the ColorMappingColorChooser you will be implementing.  The program allows zooming in by dragging the mouse, and zooming back out by clicking the right mouse button.
 
