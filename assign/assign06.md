@@ -7,10 +7,12 @@ title: "Assignment 6: Mandelbrot Set Color Mapping"
 
 *Update 12/5*: Added example interactive GUI
 
+*Update 12/6*: See the [Trying it out](#trying-it-out) section for instructions on how you can try out your **ColorMappingColorChooser** in an interactive GUI
+
 Getting Started
 ===============
 
-Download [CS201\_Assign06.zip](CS201_Assign06.zip) and import it into your Eclipse workspace (**File&rarr;Import&rarr;General&rarr;Existing projects into workspace&rarr;Archive file**.)
+Download [CS201\_Assign06a.zip](CS201_Assign06a.zip) and import it into your Eclipse workspace (**File&rarr;Import&rarr;General&rarr;Existing projects into workspace&rarr;Archive file**.)
 
 You should see a project called **CS201\_Assign06** in the Package Explorer. You will be making changes to the **ColorMappingColorChooser** class. You will also be adding test cases to the **ColorMappingColorChooserTest** class.  You should add any additional classes or methods needed to complete the assignment.
 
@@ -120,7 +122,7 @@ Creating the iterColorMap
 ===========================
 The **createIterColorMap()** method accepts a reference to the **iterCounts** array and returns a reference to the **iterColorMap** that it creates from the **iterSpectrumMap** contents.  The **iterColorMap** correlates each distinct iterCount with its corresponding RGB color value.
 
-The method must iterate through the **iterSpectrumMap** to get the spectrum location for each distinct **iterCount**  The spectrum location is then used to determine the red, green, and blue color components for that **iterCount**.  Each **iterCount** key and its respective color value are then stored in the *iterColorMap**.  The **getColor()** method then returns the color associated with each **iterCount** by looking up the color in the **iterColorMap**.
+The method must iterate through the **iterSpectrumMap** to get the spectrum location for each distinct **iterCount**  The spectrum location is then used to determine the red, green, and blue color components for that **iterCount**.  Each **iterCount** key and its respective color value are then stored in the **iterColorMap**.  The **getColor()** method then returns the color associated with each **iterCount** by looking up the color in the **iterColorMap**.
 
 The calculations for the red, green, and blue color components for each **iterCount** use its relative spectrum location:
 
@@ -128,21 +130,28 @@ The calculations for the red, green, and blue color components for each **iterCo
 		
 combined with the **sine** and **cosine** trig functions to generate smooth transitions between the composite RGB spectrum colors.  The color component calculations are:
 
-        red = sin(spectrum location / maxLocation * PI/2) * 255
-		
-        green = sin(spectrum locatoin / maxLocation * PI) * 255
-		
-        blue = cos(spectrum location / maxLocation * PI/2) * 255
-		
+```
+red = sin(spectrum location / maxLocation * PI/2) * 255
+
+green = sin(spectrum location / maxLocation * PI) * 255
+
+blue = cos(spectrum location / maxLocation * PI/2) * 255
+```
+
 The color value is then created from:
 
         color = new Color(red, green, blue)
 		
-and is assigned to the **iterColorMap** with its respective ** iterCount** key.  
+and is assigned to the **iterColorMap** with its respective **iterCount** key.  
 
 The RGB color generation graph for the above scheme is shown below:
 
 > <a href="img/assign06/TrigColorGeneration.png"><img style="width: 600px; height: 250px;" src="img/assign06/TrigColorGeneration.png" /></a>
+
+Trying it out
+=============
+
+Once your **ColorMappingColorChooser** class is tested and working, you can try running it in an interactive GUI by right-clicking the **Main** class and choosing **Run as** &rarr; **Java application**.  (Note that you will need the [CS201\_Assign06a.zip](CS201_Assign06a.zip) project skeleton: if you are working from the original project skeleton, you can import the new one and copy your **ColorMappingColorChooser** class into it.)
 
 JUnit Test Cases
 ===========
@@ -171,6 +180,8 @@ Test iterCounts Array Contents (expected results)
 Test Map Contents (expected results)
 -------------------------------------
 > <a href="img/assign06/TestMapContents.png"><img style="width: 700px; height: 300px;" src="img/assign06/TestMapContents.png" /></a>
+
+
 
 Grading Criteria
 ================
