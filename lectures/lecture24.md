@@ -22,7 +22,7 @@ Let's say we are going to use a relational database to store information about b
 > Whittlbey | W.H.J. | Guide to Impossible Buildings  | 82-234-5475-0
 > Earwig | Lettice | First Flights in Witchcraft | 5-9672-6521-X
 > Lightly | W.E. | Habits of the Wolves | 91-33-65168-X
-> Tacticus | Callus | Sieges and Survival | 0-651-65165-4
+> Tacticus | Callus | Sieges and Survival | 99921-58-10-7
 > Tacticus | Callus | VENI VIDI VICI: A Soldier's Life | 84-15978-99-5
 
 In this relation, there are four attributes called **author\_lastname**, **author\_firstname**, **title**, and **ISBN**. Each attribute is a text string.
@@ -42,7 +42,7 @@ We can avoid this redundancy by splitting the database into two relations, **boo
 > 2 | 2 | Guide to Impossible Buildings | 82-234-5475-0
 > 3 | 3 | First Flights in Witchcraft | 5-9672-6521-X
 > 4 | 4 | Habits of the Wolves | 91-33-65168-X
-> 5 | 5 | Sieges and Survival | 0-651-65165-4
+> 5 | 5 | Sieges and Survival | 99921-58-10-7
 > 6 | 5 | VENI VIDI VICI: A Soldier's Life | 84-15978-99-5
 >
 > The **authors** relation:
