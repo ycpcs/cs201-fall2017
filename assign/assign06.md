@@ -151,7 +151,7 @@ The RGB color generation graph for the above scheme is shown below:
 Trying it out
 =============
 
-Once your **ColorMappingColorChooser** class is tested and working, you can try running it in an interactive GUI by right-clicking the **Main** class and choosing **Run as** &rarr; **Java application**.  (Note that you will need the [CS201\_Assign06a.zip](CS201_Assign06a.zip) project skeleton: if you are working from the original project skeleton, you can import the new one and copy your **ColorMappingColorChooser** class into it.)
+Once your **ColorMappingColorChooser** class is tested and working, you can try running it in an interactive GUI by right-clicking the **Main** class and choosing **Run as** &rarr; **Java application**.  (Note that you will need the [CS201\_Assign06a.zip](CS201_Assign06a.zip) project skeleton: if you are working from the original project skeleton, you can import the new one and copy your **ColorMappingColorChooser** and **ColorMappingColorChooserTest** classes into it.)
 
 JUnit Test Cases
 ===========
