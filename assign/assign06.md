@@ -59,7 +59,7 @@ Your task is to finish implementing the following three methods, plus provide JU
         return iterCountMap;
     }
 
-    public HashMap<Integer, Integer> createIterSpectrumMap(int[][] iterCounts) {
+    public HashMap<Integer, Integer> createIterSpectrumMap() {
         // Run through the iterCountMap, and calculate the relative location
         // of each unique iterCount within the Color Spectrum, and map that
         // location to each iterCount from the iterCountMap.  This is not the
@@ -73,7 +73,7 @@ Your task is to finish implementing the following three methods, plus provide JU
         return iterSpectrumMap;
     }
 
-    public HashMap<Integer, Color> createIterColorMap(int[][] iterCounts) {
+    public HashMap<Integer, Color> createIterColorMap() {
         // Run through the iterSpectrumMap and calculate the RGB color values
         // based on each iterCount's relative spectrum location from the
         // iterSpectrum Map.  This will map the iterCounts from iterCountMap
