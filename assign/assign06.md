@@ -108,7 +108,7 @@ The method must iterates through the **iterCounts** array, and it will either en
 
 Creating the iterSpectrumMap
 ==============================
-The **createIterSpectrumMap()** method accepts a reference to the **iterCounts** array and returns a reference to the **iterSpectrumMap** that it creates from the **iterCountMap** contents.  The **iterSpectrumMap** correlates each distinct **iterCount** with its location in the color spectrum.  **createIterColorMap** will then assign a distinct color to each **iterCount** based on the contents of **iterSpectrumMap**.
+The **createIterSpectrumMap()** method creates the **iterSpectrumMap** using the contents of the **iterCountMap** and then returns a reference to the **iterSpectrumMap** that it creates.  The **iterSpectrumMap** correlates each distinct **iterCount** with its location in the color spectrum.  **createIterColorMap** will then assign a distinct color to each **iterCount** based on the contents of **iterSpectrumMap**.
 
 The method must iterate through the keys of the **iterCountMap**, in ascending order, and accumulate the location of each **iterCount** from the beginning of the color spectrum.  The occurrence count for each **iterCountMap** key determines the width of the spectrum band that the **iterCount** occupies.  The sum of the prior occurence counts (widths or spectrum bands) determines the location of the leading edge of the next **iterCount** spectrum band.  Each **iterCount** is then centered in its spectrum band:
 
@@ -120,7 +120,7 @@ At the end of iteration, the width of the entire spectrum (the sum of all the va
 
 Creating the iterColorMap
 ===========================
-The **createIterColorMap()** method accepts a reference to the **iterCounts** array and returns a reference to the **iterColorMap** that it creates from the **iterSpectrumMap** contents.  The **iterColorMap** correlates each distinct iterCount with its corresponding RGB color value.
+The **createIterColorMap()** method creates the **iterColorMap** using the contents of the **iterSpectrumMap** and returns a reference to the **iterColorMap** that it creates.  The **iterColorMap** correlates each distinct iterCount with its corresponding RGB color value.
 
 The method must iterate through the **iterSpectrumMap** to get the spectrum location for each distinct **iterCount**  The spectrum location is then used to determine the red, green, and blue color components for that **iterCount**.  Each **iterCount** key and its respective color value are then stored in the **iterColorMap**.  The **getColor()** method then returns the color associated with each **iterCount** by looking up the color in the **iterColorMap**.
 
